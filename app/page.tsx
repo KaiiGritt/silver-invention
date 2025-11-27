@@ -369,17 +369,11 @@ const Portfolio = () => {
                 className="group bg-gray-900/40 backdrop-blur-xl border border-gray-800 rounded-3xl overflow-hidden shadow-lg transition hover:shadow-purple-500/20 hover:border-purple-500/40"
               >
                 {/* Live Demo Preview */}
-                <div className="relative overflow-hidden h-64 bg-gray-950">
+                <div className="relative overflow-hidden h-64 bg-gray-950 rounded-t-3xl">
                   <iframe
                     src={project.demo}
                     title={project.title}
-                    className="w-full h-full border-0 pointer-events-none scale-[0.5] origin-top-left"
-                    style={{
-                      width: '200%',
-                      height: '200%',
-                      transform: 'scale(0.5)',
-                      transformOrigin: 'top left'
-                    }}
+                    className="w-full h-full border-0 pointer-events-none object-cover"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
