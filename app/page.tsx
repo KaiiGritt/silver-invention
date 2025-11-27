@@ -50,14 +50,14 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "E-Commerce Website",
-      description: "A modern online shopping platform with user authentication, product management, and a clean UI/UX.",
+      title: "Lawlaw Delights",
+      description: "Your trusted marketplace for authentic Filipino seafood delicacies from Bulan, Sorsogon. Features secure shopping, recipes, and fast delivery of fresh products.",
       demo: "https://bulan-lawlaw-delicacy-system-production.up.railway.app/login",
       github: "https://github.com/KaiiGritt/Bulan-lawlaw-delicacy-system"
     },
     {
-      title: "Portfolio Website",
-      description: "A stylish personal portfolio built with Next.js, Tailwind CSS, and animations.",
+      title: "GhostSec",
+      description: "A cybersecurity education platform focused on ethical hacking and digital security. Includes interactive tools like password analyzers, threat maps, and phishing tests.",
       demo: "https://ghostsec-michaelas-projects-43685615.vercel.app/index.html?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExYlUwNWtqa21pc2NVNDZzYXNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR4KjObBlSC8pYRZXF-CclVJAwvkoFob5rUJmxW9nO4EfGH71UzdPjYuF7rO3A_aem_zkZZNE7SfaY3wkwUGq8aLA",
       github: "https://github.com/yourrepo"
     }
