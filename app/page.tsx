@@ -52,14 +52,12 @@ const Portfolio = () => {
     {
       title: "E-Commerce Website",
       description: "A modern online shopping platform with user authentication, product management, and a clean UI/UX.",
-      image: "/projects/ecommerce.jpg",
       demo: "https://bulan-lawlaw-delicacy-system-production.up.railway.app/login",
       github: "https://github.com/KaiiGritt/Bulan-lawlaw-delicacy-system"
     },
     {
       title: "Portfolio Website",
       description: "A stylish personal portfolio built with Next.js, Tailwind CSS, and animations.",
-      image: "/projects/portfolio.jpg",
       demo: "https://ghostsec-michaelas-projects-43685615.vercel.app/index.html?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExYlUwNWtqa21pc2NVNDZzYXNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR4KjObBlSC8pYRZXF-CclVJAwvkoFob5rUJmxW9nO4EfGH71UzdPjYuF7rO3A_aem_zkZZNE7SfaY3wkwUGq8aLA",
       github: "https://github.com/yourrepo"
     }
@@ -370,13 +368,34 @@ const Portfolio = () => {
                 key={index}
                 className="group bg-gray-900/40 backdrop-blur-xl border border-gray-800 rounded-3xl overflow-hidden shadow-lg transition hover:shadow-purple-500/20 hover:border-purple-500/40"
               >
-                {/* Image */}
-                <div className="overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover rounded-t-3xl transition-transform duration-500 group-hover:scale-110"
+                {/* Live Demo Preview */}
+                <div className="relative overflow-hidden h-64 bg-gray-950">
+                  <iframe
+                    src={project.demo}
+                    title={project.title}
+                    className="w-full h-full border-0 pointer-events-none scale-[0.5] origin-top-left"
+                    style={{
+                      width: '200%',
+                      height: '200%',
+                      transform: 'scale(0.5)',
+                      transformOrigin: 'top left'
+                    }}
+                    loading="lazy"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
+
+                  {/* Hover overlay to make iframe clickable */}
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-950/80 backdrop-blur-sm"
+                  >
+                    <div className="text-center">
+                      <ExternalLink className="w-8 h-8 mx-auto mb-2 text-purple-400" />
+                      <span className="text-white font-semibold">View Live Demo</span>
+                    </div>
+                  </a>
                 </div>
 
                 {/* Content */}
@@ -390,6 +409,7 @@ const Portfolio = () => {
                       <a
                         href={project.demo}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="px-4 py-2 rounded-xl bg-purple-600/20 border border-purple-600/40 text-purple-300 hover:bg-purple-600/30 transition text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="w-4 h-4" /> Live Demo
@@ -400,6 +420,7 @@ const Portfolio = () => {
                       <a
                         href={project.github}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="px-4 py-2 rounded-xl bg-gray-800/40 border border-gray-700 text-gray-300 hover:bg-gray-800 transition text-sm flex items-center gap-2"
                       >
                         <Github className="w-4 h-4" /> Code
